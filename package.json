@@ -1,0 +1,32 @@
+{
+  "name": "onerec",
+  "version": "0.1.0",
+  "description": "onerec - html recorder",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://tareq0065@github.com/tareq0065/onerec.git"
+  },
+  "keywords": [],
+  "author": "Tareq Aziz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tareq0065/onerec/issues"
+  },
+  "homepage": "https://github.com/tareq0065/onerec#readme",
+  "engines": {
+    "node": ">=16.18.1"
+  },
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "puppeteer": "^19.2.2",
+    "scenejs": "^1.6.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
