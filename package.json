@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "nodemon test.js"
+    "test": "node --trace-warnings test.js"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,17 @@
     "node": ">=16.18.1"
   },
   "dependencies": {
+    "@scenejs/render": "^0.11.2",
+    "del": "^7.0.0",
     "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^10.1.0",
     "puppeteer": "^19.2.2",
-    "scenejs": "^1.6.0"
+    "scenejs": "^1.6.0",
+    "sprintf-js": "^1.1.2",
+    "timecut-core": "^0.3.3",
+    "timesnap": "^0.3.3",
+    "timeweb": "^0.3.1",
+    "unrandomize": "^0.1.0"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
