@@ -1,4 +1,4 @@
-const renderer = require('./rendererd');
+const renderer = require('./renderer');
 const path = require('path');
 const fs = require('fs');
 const { convertSeconds } = require('./utils');

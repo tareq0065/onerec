@@ -1,8 +1,8 @@
 // Rollup plugins
 const babel = require('rollup-plugin-babel');
 const resolve = require('rollup-plugin-node-resolve');
-const commonjs = require('rollup-plugin-commonjs');
-const replace = require('rollup-plugin-replace');
+const copy = require('rollup-plugin-copy');
+const { terser } = require('rollup-plugin-terser');
 const { uglify } = require('rollup-plugin-uglify');
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
 	format: 'iife',
 	sourceMap: 'inline',
 	plugins: [
-		commonjs(),
+		terser(),
 		resolve({
 			jsnext: true,
 			main: true,
@@ -22,11 +22,14 @@ module.exports = {
 		}),
 		babel({
 			exclude: 'node_modules/**',
-			babelrc: false,
-		}),
-		replace({
-			exclude: 'node_modules/**',
+			presets: [
+				['@babel/preset-env', { modules: false }],
+				'@babel/preset-react',
+			],
 		}),
 		uglify(),
+		copy({
+			targets: [{ src: 'renderer/*', dest: 'build/renderer' }],
+		}),
 	],
 };
