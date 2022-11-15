@@ -1,6 +1,7 @@
 const renderer = require('./rendererd');
 const path = require('path');
 const fs = require('fs');
+const { convertSeconds } = require('./utils');
 const spawn = require('child_process').spawn;
 const cpus = require('os').cpus().length;
 const defaultFPS = 60;
@@ -153,7 +154,14 @@ module.exports = async function (config) {
 		}
 
 		if (config.audio) {
-			ffmpegArgs = ffmpegArgs.concat(['-i', config.audio]);
+			ffmpegArgs = ffmpegArgs.concat([
+				'-ss',
+				0,
+				'-t',
+				convertSeconds(config.duration),
+				'-i',
+				config.audio,
+			]);
 		}
 
 		convertProcess = spawn(ffmpegPath, ffmpegArgs);
