@@ -16,7 +16,7 @@ const makeFileDirectoryIfNeeded = function (filepath) {
 	for (ind = 1; ind <= directories.length; ind++) {
 		currDir = directories.slice(0, ind).join(path.sep);
 		if (currDir && !fs.existsSync(currDir)) {
-			fs.mkdirSync(currDir);
+			fs.mkdirSync(__dirname, currDir);
 		}
 	}
 };
