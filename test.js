@@ -23,7 +23,7 @@ const path = require('path');
 
 recorder({
 	launcher: (launchOptions) => puppeteer.launch(launchOptions),
-	url: 'http://localhost:3000/render',
+	url: 'http://localhost:3000/panel/render',
 	viewport: {
 		width: 1920, // sets the viewport (window size) to 800x600
 		height: 1080,
