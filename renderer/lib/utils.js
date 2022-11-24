@@ -53,8 +53,10 @@ const setPageViewportSize = async function (page, config) {
 };
 
 const getSelectorDimensions = async function (page, selector) {
+	await page.waitForSelector(selector);
 	return page.evaluate(function (selector) {
 		var el = document.querySelector(selector);
+		console.log('el', el);
 		var dim = el.getBoundingClientRect();
 		if (el) {
 			return {
