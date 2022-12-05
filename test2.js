@@ -38,11 +38,11 @@ let rr = new Recorder({
 	fps: 25, // saves 30 frames for each virtual second
 	duration: 60, // for 20 virtual seconds
 	screenshotType: 'jpeg', // jpeg/png
-	output: 'baabe3f44de32eeadf7d55ee6f034382.mp4', // to video.mp4 of the current working directory
+	output: '4.mp4', // to video.mp4 of the current working directory
 	audio: path.resolve(__dirname, 'baabe3f44de32eeadf7d55ee6f034382.mp3'),
 	executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 });
 
 rr.record().then(function () {
-	console.log('Done!');
+	console.log('Done 2!');
 });

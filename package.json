@@ -1,12 +1,13 @@
 {
   "name": "onerec",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "onerec - html recorder",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "build": "rollup -c",
-    "test": "node --trace-warnings test.js"
+    "test": "node --trace-warnings test.js",
+    "test2": "node --trace-warnings test2.js"
   },
   "repository": {
     "type": "git",
